@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="lib/jqm/css/jquery.mobile-1.4.5.min.css" />
+		
+        <title>Amexa</title>
+        
+        <script type="text/javascript" src="lib/jq/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="lib/jqm/js/jquery.mobile-1.4.5.min.js"></script>	
+        
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+        
+    </head>
+    <body>
+
+        <div data-role="page" id="login">
+        
+            <div data-role="header" data-theme="b" data-position="fixed">
+                <h3>Amexa Car Sale</h3>   
+                <div id="header2">
+                    <h2>Please login to continue</h2>
+                </div>
+            </div>
+            
+            <div class="ui-content">
+                <div class="ui-body ui-body-a ui-corner-all">
+                    <div style="text-align: center">
+                        
+                        <form id="frmLogin">
+                            <input type="text" placeholder="Username" id="txtUsername" required autofocus>
+                            <input type="password" placeholder="Password" id="txtPassword" required>
+                            
+                            <fieldset class="ui-grid-a" >
+                                <div class="ui-block-a"><input type="submit" class="ui-btn ui-btn-b" value="Submit" ></div>
+                                <div class="ui-block-b"><input type="reset" class="ui-btn ui-btn-b" value="Reset" ></div>
+                            </fieldset> 
+            
+                        </form>
+                        
+                    </div>
+                    
+                    <div style="font-size: 12px; text-align: center;">
+                        <strong>not registered?</strong> continue as Guest<br/>
+                        username: guest/ password: guest                        
+                    </div>
+                    
+                </div>
+                                
+            </div>  
+            
+            <div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">
+                <h3>(c) copyrights 2015</h3>
+            </div>
+        
+        </div> <!-- end of page -->
+        
+        
+        <div data-role="page" id="home">
+        
+            <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false" >
+                <h3>Amexa Car Sale</h3>
+                <a href="#menu" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Menu</a>
+                <div id="header2">
+                    <h2><label id="welcomeName"></label></h2>
+                </div>
+            </div>
+
+            <div style="background-image: url('img/car_home.jpg');	background-position: center; height: 100px; width: 100%;">                
+            </div>
+            
+            <div class="ui-content">
+            
+                <div data-role="controlgroup">
+                    <a class="ui-btn ui-btn-b" href="#vehicle_home">Vehicles</a>
+                    <!-- <a class="ui-btn ui-btn-b" href="#order">Place Order</a> -->
+                    <a class="ui-btn ui-btn-b" href="#mylocation">Find us</a>
+                </div>
+                
+            </div> <!-- end of content section -->
+            
+            <div data-role="panel" id="menu" data-position="left" data-display="push" data-theme="b">
+                <h1 class="ui-title">Menu</h1>
+                <ul data-role="listview">
+                    <li data-icon="delete" data-rel="close"><a href="#">Close menu</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" class="btnMenuExit">Exit</a></li>
+                </ul>
+            </div>
+            
+            <div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false" >
+                <h3>(c) copyrights 2015</h3>
+            </div>
+        
+        </div> <!-- end of page -->
+        
+        <div data-role="page" id="vehicle_home">
+        
+            <div data-role="header" data-theme="b" data-position="fixed">
+                <h3>Amexa Car Sale</h3>
+                <a href="#menu" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Menu</a>
+                <div id="header2">
+                    <h2>Displaying available vehicles</h2>
+                </div>
+            </div>
+            
+            <div data-role="none">
+                           
+                <div data-role="tabs" id="tabs">
+                    <div data-role="navbar" data-theme="b">
+                        <ul>
+                          <li><a href="#toyota" >Toyota</a></li>
+                          <li><a href="#nissan" >Nissan</a></li>
+                          <li><a href="#honda" >Honda</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div id="toyota" class="ui-body-d ui-content">
+                        <ul id="toyotaItems" data-role="listview">
+                        </ul>
+                    </div>
+                    
+                    <div id="nissan">                
+                        <ul id="nissanItems" data-role="listview">
+                        </ul>
+                    </div>
+                        
+                    <div id="honda">                
+                        <ul id="hondaItems" data-role="listview">
+                        </ul>
+                    </div>
+                </div>
+                
+            </div> <!-- end of content section -->
+            
+            <div data-role="panel" id="menu" data-position="left" data-display="push" data-theme="b">
+                <h1 class="ui-title">Menu</h1>
+                <ul data-role="listview">
+                    <li data-icon="delete" data-rel="close"><a href="#">Close menu</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" class"btnMenuExit">Exit</a></li>
+                </ul>
+            </div>
+            
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <h3>(c) copyrights 2015</h3>
+            </div>
+        
+        </div>
+        
+        <div data-role="page" id="bid">
+            
+             <div data-role="header" data-theme="b" data-position="fixed">
+                <h3>Amexa Car Sale</h3>
+                 <a href="#bid" id="btnFinishBid" class="ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide">Order</a> 
+                                
+                <div id="header2">
+                    <h2>Displaying current bids</h2>
+                </div>
+                 
+            </div>
+            
+            <div data-role="none">
+                
+                <div id="vehicleDetails">                    
+                </div>
+                
+                <ul id="bidItems" data-role="listview">
+                </ul>
+                
+                <!--                
+                <div id="cartItems">
+                </div>
+                -->
+                
+                <div id="checkoutBox" role="main" class="ui-content">
+                    <div id="itemCount" style="padding: 10px">
+                    </div>
+                    <a href="#purchase" class="ui-btn ui-btn-b ui-corner-all ui-btn-icon-right ui-icon-check" data-rel="popup" data-position-to="window" data-transition="pop">Place Bid</a>
+                </div>    
+                
+                <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+                    <h3>Place bid?</h3>
+                    <p>Your bid will be recorded.</p>
+                    <input type="text" id="txtBidAmount" />      
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><a id="btnBid" href="index.html" data-rel="back" class="ui-btn ui-corner-all ui-btn-b">Bid</span></a></div>
+                        <div class="ui-block-b"><a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all">Cancel</a></div>
+                    </div>
+                </div>                
+                
+            </div>
+        
+        <div data-dom-cache="false" data-role="page" id="mylocation">
+             <div data-role="header" data-theme="b" data-position="fixed">
+                <h3>Amexa Car Sale</h3>
+                                
+                <div id="header2">
+                    <h2>Find us</h2>
+                </div>
+                 
+            </div>
+
+            <div id="map" style="width:100%; height:250px;">
+            </div>
+            
+            <div role="main" class="ui-content">
+                
+                <div class="ui-body ui-corner-all custom-corners">                    
+                        <div class="ui-bar ui-bar-b">
+                            <h6>Address</h6>
+                        </div>
+                        <p>No 15, 42nd Lane,<br/> Colombo 06.</p>
+                        <div class="ui-bar ui-bar-b">
+                            <h6>Telephone</h6>
+                        </div>
+                        <p><a href="tel:0112334455">0112334455</a></p>
+                </div>
+                
+            </div>
+            
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                                <h3>(c) copyrights 2015</h3>
+
+                <!-- <h1>Sub Total : <span id="totalAmount"></span></h1> -->
+            </div>            
+        
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
